@@ -1,6 +1,9 @@
 function ninjaGUI(fname)
-%Routine to check initial configuration of the fNIRS device and launch the
-%startup sequence
+%This script launches ninjaNIRS based according to the specifications in
+%the hardware configuration (cfg) and the probe files
+disp('Checking compatible devices...')
+compatDevices=checkCompatibility();
+
 if nargin==0
     [fname,path]=uigetfile({'*.cfg', 'Hardware configuration file (*.cfg)'});
     fname=[path,filesep,fname];
@@ -36,7 +39,7 @@ end
 
 if okflag
     %call set environment function with devinfo input
-    disp('Setting environment')    
+    disp('Setting GUI environment')    
     environment=setEnv(devinfo);
     disp('Starting NIRS application')    
     %start main app with environment input

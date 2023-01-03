@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="4257805962" file="C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUI\ninjaGUIinstaller.prj" location="C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUI" name="ninjaGUIinstaller" preferred-package-location="C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUIdev\ninjaGUIinstaller\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="250408143" file="C:\Users\oanto\Documents\MATLAB\work\BU\ninjaGUI\ninjaGUIinstaller.prj" location="C:\Users\oanto\Documents\MATLAB\work\BU\ninjaGUI" name="ninjaGUIinstaller" preferred-package-location="C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUIdev\ninjaGUIinstaller\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>ninjaGUI</param.appname>
     <param.icon />
     <param.icons />
@@ -19,7 +19,7 @@
     <param.intermediate>C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUIdev\ninjaGUIinstaller\for_testing</param.intermediate>
     <param.files.only>C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUIdev\ninjaGUIinstaller\for_redistribution_files_only</param.files.only>
     <param.output>C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUIdev\ninjaGUIinstaller\for_redistribution</param.output>
-    <param.logdir>C:\Users\Antonio\Documents\MATLAB\work\BU\boas lab\rtfNIRS\ninjaGUIdev\ninjaGUIinstaller</param.logdir>
+    <param.logdir>${PROJECT_ROOT}</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -81,6 +81,27 @@
     <fileset.package />
     <fileset.depfun>
       <file>${MATLAB_ROOT}\toolbox\local\userpath.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\cd_safe.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\filesepStandard.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\fullpath.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\getAppDir.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\guiOutsideScreenBorders.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\InitLogger.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\isdir_private.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\isfile_private.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\ishandles.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\ispathvalid.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\Logger.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\MenuBox.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\namespace\getNamespace.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\nearest_point.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\optionExists.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\setGuiFonts.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\sizeof.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\sprintf_waitbar.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\str2cell.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\str2cell_fast.m</file>
+      <file>C:\Users\oanto\Documents\MATLAB\work\BU\Homer3\Utils\waitbar_improved.m</file>
       <file>${PROJECT_ROOT}\fNIRSapp.mlapp</file>
       <file>${PROJECT_ROOT}\GetExtinctions.m</file>
       <file>${PROJECT_ROOT}\hardwareselect.mlapp</file>
@@ -93,8 +114,15 @@
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2021a</root>
-      <toolboxes />
+      <root>C:\Program Files\MATLAB\R2021b</root>
+      <toolboxes>
+        <toolbox name="gpucoder" />
+      </toolboxes>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
     </matlab>
     <platform>
       <unix>false</unix>
